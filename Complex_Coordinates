@@ -43,4 +43,4 @@ bool ComplexCoordinates::operator==(const ComplexCoordinates& arg) {// вне к
 ostream& operator<<(ostream& stream, const ComplexCoordinates& arg) {//перегрузка побитового сдвиг влево
     cout << arg.re << " + " << arg.im << "*i";//понадобится для вывода в консоль
     return stream;
-}
+}//
