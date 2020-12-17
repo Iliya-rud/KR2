@@ -3,9 +3,9 @@
 using namespace std;
 
 class ComplexCoordinates{
-private:
-    double re, im;//приватные поля
-public:
+public://private:
+    double re, im;
+//public:
     ComplexCoordinates();//конструктор для зануления координат, чтобы не возникало мусора
     ComplexCoordinates(double re, double im);//определение конструктора для считывания комплексной координаты 
     ComplexCoordinates operator+(const ComplexCoordinates& arg);//перегрузили оператор сложения
