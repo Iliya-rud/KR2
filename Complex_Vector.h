@@ -17,7 +17,7 @@ public:
     ComplexVector& operator=(const ComplexVector& arg);//определение перегрузки оператора =
     ComplexVector operator+(const ComplexVector& arg);//определение перегрузки оператора +
     ComplexVector operator-(const ComplexVector& arg);//определение перегрузки оператора -
-    ComplexVector operator*(const ComplexVector& arg);
+    ComplexCoordinates operator*(const ComplexVector& arg);
     ComplexCoordinates operator[](int pos);//определение перегрузки оператора [] индексации (понадобится в автотесте)
     void Print();//определение метода вывода
     void  GetCoordinates(const ComplexCoordinates& arg);// определение метода, с помощью которого в объект класса ComplexVector мы положим координаты
