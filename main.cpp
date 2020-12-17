@@ -13,7 +13,7 @@ int main(void){
     if (test_res == 1){
         cout << "AutoTest passed..." << endl;
     }
-
+    ComplexCoordinates skal_p(0,0);
     ComplexCoordinates a1(1,3), a2(2,3), a3(1,3), a4(-1,0);//декларируем комплексные координаты
     ComplexCoordinates b1(4,1), b2(4,2), b3(2,3), b4(1,0);//декларируем комплексные координаты
 
@@ -32,13 +32,17 @@ int main(void){
     ComplexVector Vector4 = Vector1 - Vector3;
     Vector4.Print();
     cout << "Scalar multiplication first vector and second vector:" << endl;
-    ComplexVector Vector5 = Vector1 * Vector2;
-    Vector5.Print();
-    cout << "Result of increasing the dimension of the vector:" << endl;
+    skal_p = Vector1 * Vector2;
+    cout << "the real part of a complex number" << endl;
+    cout << skal_p.re << endl;
+    cout << "imaginary part of a complex number" << endl;
+    cout << skal_p.im << endl;
+    //cout << skal_p[1] << endl;
+    //cout << "Result of increasing the dimension of the vector:" << endl;
     //Так можно увеличить размерность вектора, то есть его длинну. Добавим элемент координат в конец
-    ComplexCoordinates NewCoord(-47, 288);//задекларировали и инициализировали объект класса ComplexCoordinates
-    Vector5.GetCoordinates(NewCoord);//присвоили новую координату старому вектору
-    Vector5.Print();//вывели
+    //ComplexCoordinates NewCoord(-47, 288);//задекларировали и инициализировали объект класса ComplexCoordinates
+    //Vector5.GetCoordinates(NewCoord);//присвоили новую координату старому вектору
+    //Vector5.Print();//вывели
     cout << "The end!" << endl;
     cout << "SUCCESS!" << endl;
     return 0;
