@@ -57,16 +57,24 @@ ComplexVector ComplexVector::operator-(const ComplexVector& arg) {//перегр
     }
     return result;
 }
-ComplexVector ComplexVector::operator*(const ComplexVector& arg) {//Перегрузка оператора умножения в классе ComplexCoordinates
+ComplexCoordinates ComplexVector::operator*(const ComplexVector& arg) {//Перегрузка оператора умножения в классе ComplexCoordinates
     ComplexVector result = *this;//декларируем и инициализируем объект класса ComplexVector для осуществления перегрузки оператора умножения
+    ComplexCoordinates res;//декларируем и инициализируем объект класса ComplexCoordinates для реализации скалярного произведения
     if (numbers != arg.numbers) {//проверяем всё ли правильно и корректно
         cout << "Error: vectors have different dimensions." << endl;
-        return result;
+        return res;
     }
+
+
     for (int i = 0; i < numbers; ++i) {
         result.data[i] = result.data[i] * arg.data[i];//реализуем умножение с помощью вспомогительного объекта result из класса ComplexVector
     }
-    return result;
+
+    for (int i = 0; i < numbers; ++i) {
+       res=result.data[i]+res;
+       }
+
+    return res;
 }
 ComplexCoordinates ComplexVector::operator[](int arg) {//перегрузка оператора[] индексации ComplexVector::operator[] из класса ComplexCoordinates
     ComplexCoordinates result;
